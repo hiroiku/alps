@@ -35,6 +35,9 @@ RUN docker-php-ext-install mysqli
 # opcache
 RUN docker-php-ext-enable opcache
 
+# pdo
+RUN docker-php-ext-install pdo pdo_mysql
+
 # zip
 RUN apk add --update --no-cache libzip-dev \
     && docker-php-ext-install zip
